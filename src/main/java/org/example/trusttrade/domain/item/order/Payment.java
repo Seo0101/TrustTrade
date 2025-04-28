@@ -30,12 +30,16 @@ public class Payment {
     private int amount;
 
     @Enumerated(EnumType.STRING)
-    private PaymentStatus status;
+    private Status status = Status.READY;
 
     @CreatedDate
     private LocalDateTime requestAt;
     @LastModifiedDate
     private LocalDateTime approvedAt;
+
+    public enum Status{
+        READY,IN_PROGRESS, SUCCESS, FAILED, EXPIRED
+    }
 }
 
 

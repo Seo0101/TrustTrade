@@ -33,7 +33,7 @@ public class DepositOrder {
     private User seller;
 
     @Enumerated(EnumType.STRING)
-    private DepositOrderStatus status = DepositOrderStatus.PENDING;
+    private Status status = Status.PENDING;
 
     //insert시 자동 생성
     @CreatedDate
@@ -41,4 +41,8 @@ public class DepositOrder {
     //업데이트시 자동 생성
     @LastModifiedDate
     private LocalDateTime updateAt;
+
+    public enum Status{
+        PENDING,DEPOSITED, REFUNDED, EXPIRED
+    }
 }

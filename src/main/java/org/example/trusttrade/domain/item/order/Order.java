@@ -34,11 +34,15 @@ public class Order {
     private User buyer;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus status;
+    private Status status = Status.PENDING;
 
     @CreatedDate
     private LocalDateTime createdAt;
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    public enum Status{
+        PENDING, PAID, COMPLETED, CANCELLED
+    }
 
 }

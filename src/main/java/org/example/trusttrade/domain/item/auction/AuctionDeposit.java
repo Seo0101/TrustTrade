@@ -33,7 +33,7 @@ public class AuctionDeposit {
     private User bidder;
 
     @Enumerated(EnumType.STRING)
-    private AuctionDepositStatus status;
+    private Status status = Status.DEPOSITED;
 
     private int amount;
 
@@ -43,4 +43,7 @@ public class AuctionDeposit {
     @Column(nullable = true)
     private LocalDateTime refundedAt;
 
+    public enum Status{
+        DEPOSITED, REFUNDED, EXPIRED
+    }
 }
