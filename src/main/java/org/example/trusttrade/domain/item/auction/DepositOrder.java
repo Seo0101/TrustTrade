@@ -1,12 +1,23 @@
 package org.example.trusttrade.domain.item.auction;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.trusttrade.domain.User;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class DepositOrder {
 
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "deposit_order_id")
     private Long id;
 
     @OneToOne
@@ -22,8 +33,12 @@ public class DepositOrder {
     private User seller;
 
     @Enumerated(EnumType.STRING)
-    private DepositOrderStatus status;
+    private DepositOrderStatus status = DepositOrderStatus.PENDING;
 
-    private LocalDateTime creationAt;
+    //insert시 자동 생성
+    @CreatedDate
+    private LocalDateTime createdAt;
+    //업데이트시 자동 생성
+    @LastModifiedDate
     private LocalDateTime updateAt;
 }

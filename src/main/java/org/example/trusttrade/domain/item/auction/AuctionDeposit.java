@@ -1,12 +1,23 @@
 package org.example.trusttrade.domain.item.auction;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.trusttrade.domain.User;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@Entity
+@EntityListeners(AuditingEntityListener.class)
 public class AuctionDeposit {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "auction_deposit_id")
     private Long id;
 
     @ManyToOne
@@ -26,7 +37,10 @@ public class AuctionDeposit {
 
     private int amount;
 
+    @CreatedDate
     private LocalDateTime createdAt;
 
+    @Column(nullable = true)
     private LocalDateTime refundedAt;
+
 }
