@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.trusttrade.domain.item.Item;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -38,4 +39,5 @@ public class Auction extends Item {
 
     @Column(name = "end_time",nullable = false)
     private LocalDateTime endTime;
+
 }
