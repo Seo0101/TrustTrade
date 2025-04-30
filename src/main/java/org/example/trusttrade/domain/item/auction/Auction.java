@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 @Builder
+@DiscriminatorValue("AUCTION")
+@Table(name = "auction")
 public class Auction extends Item {
 
     @Id

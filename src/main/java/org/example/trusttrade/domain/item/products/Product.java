@@ -12,6 +12,8 @@ import org.example.trusttrade.domain.item.Item;
 @AllArgsConstructor
 @Getter
 @Builder
+@DiscriminatorValue("PRODUCT")
+@Table(name = "products")
 public class Product extends Item {
 
     @Id
