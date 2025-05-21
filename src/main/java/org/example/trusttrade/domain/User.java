@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import org.example.trusttrade.domain.order.Settlement;
+import org.example.trusttrade.domain.item.order.Settlement;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
