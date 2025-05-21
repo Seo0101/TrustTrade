@@ -1,6 +1,6 @@
 package org.example.trusttrade.service;
 
-import org.example.trusttrade.domain.dto.KakaoUserInfoDto;
+import org.example.trusttrade.dto.KakaoUserInfoDto;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

@@ -2,15 +2,14 @@ package org.example.trusttrade.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.dto.BusinessStatusRequest;
-import org.example.trusttrade.domain.dto.BusinessStatusResponse;
+import org.example.trusttrade.dto.BusinessStatusRequest;
+import org.example.trusttrade.dto.BusinessStatusResponse;
 import org.example.trusttrade.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;

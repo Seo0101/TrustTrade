@@ -1,7 +1,7 @@
 package org.example.trusttrade.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.dto.LoginResponse;
+import org.example.trusttrade.dto.LoginResponse;
 import org.example.trusttrade.service.KakaoLoginService;
 import org.json.JSONException;
 import org.springframework.http.ResponseEntity;

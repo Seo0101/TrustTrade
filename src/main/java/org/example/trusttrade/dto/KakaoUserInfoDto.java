@@ -1,4 +1,4 @@
-package org.example.trusttrade.domain.dto;
+package org.example.trusttrade.dto;
 
 import lombok.*;
 
