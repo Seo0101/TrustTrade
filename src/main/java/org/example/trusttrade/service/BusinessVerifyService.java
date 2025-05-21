@@ -28,7 +28,7 @@ public class BusinessVerifyService {
     @Value("${nts.api.url}")
     private String apiUrl;
 
-    @Value("${nts.api.service-key}")
+    @Value("${nts.api.url}")
     private String serviceKey;
 
     @Transactional
