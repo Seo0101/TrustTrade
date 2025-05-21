@@ -1,6 +1,6 @@
 package org.example.trusttrade.domain.item.auction;
 
-public enum Auction_status {
+public enum AuctionStatus {
     OPEN,
     CLOSED,
     CANCELED
