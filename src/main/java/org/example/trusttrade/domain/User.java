@@ -60,7 +60,7 @@ public class User {
 
     @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL, orphanRemoval = true)
     private java.util.List<Settlement> settlements;
-    
+
     @PrePersist
     public void prePersist() {
         if (this.id == null) {

@@ -1,10 +1,7 @@
 package org.example.trusttrade.domain.item.products;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.example.trusttrade.domain.item.Item;
 
 @Entity
@@ -12,6 +9,7 @@ import org.example.trusttrade.domain.item.Item;
 @AllArgsConstructor
 @Getter
 @Builder
+@Setter
 public class Product extends Item {
 
     @Id

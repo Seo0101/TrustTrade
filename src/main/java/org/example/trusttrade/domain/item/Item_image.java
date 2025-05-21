@@ -24,10 +24,10 @@ public class Item_image {
     private String image;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name = "item_id",nullable = false)
+    @JoinColumn(name = "item_id",nullable = false)
     private Item item;
 
-    @Column(name = "saved_time",nullable = false)
+    @JoinColumn(name = "saved_time",nullable = false)
     private LocalDateTime savedTime;
 
 }

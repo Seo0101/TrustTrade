@@ -1,10 +1,7 @@
 package org.example.trusttrade.domain.item;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.example.trusttrade.domain.User;
 import org.example.trusttrade.domain.item.products.Product_location;
 
@@ -13,8 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Builder
+@Getter @Setter
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Item {
 
@@ -38,4 +34,5 @@ public abstract class Item {
 
     @Column(name = "created_time", updatable = false)
     private LocalDateTime createdTime;
+
 }

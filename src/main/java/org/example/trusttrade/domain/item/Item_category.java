@@ -21,10 +21,10 @@ public class Item_category {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name="item_id",nullable = false)
+    @JoinColumn(name="item_id",nullable = false)
     private Item item;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name="category_id",nullable = false)
+    @JoinColumn(name="category_id",nullable = false)
     private Category category;
 }
