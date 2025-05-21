@@ -1,6 +1,7 @@
 package org.example.trusttrade.service;
 
 import lombok.RequiredArgsConstructor;
+import org.example.trusttrade.domain.order.Settlement;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import org.example.trusttrade.domain.item.order.Settlement;
+
 import org.example.trusttrade.repository.SettlementRepository;
 import org.example.trusttrade.repository.UserRepository;
 import org.example.trusttrade.domain.User;
