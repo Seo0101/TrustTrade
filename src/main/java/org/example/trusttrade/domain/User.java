@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import org.example.trusttrade.domain.item.order.Settlement;
+import org.example.trusttrade.domain.order.Settlement;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -61,7 +61,7 @@ public class User {
 
     @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL, orphanRemoval = true)
     private java.util.List<Settlement> settlements;
-    
+
     @PrePersist
     public void prePersist() {
         if (this.id == null) {

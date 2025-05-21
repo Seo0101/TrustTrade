@@ -1,4 +1,4 @@
-package org.example.trusttrade.domain.item.order;
+package org.example.trusttrade.domain.order;
 
 import jakarta.persistence.*;
 import lombok.Getter;

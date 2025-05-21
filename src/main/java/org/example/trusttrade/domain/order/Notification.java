@@ -1,4 +1,4 @@
-package org.example.trusttrade.domain.item.order;
+package org.example.trusttrade.domain.order;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -29,5 +29,14 @@ public class Notification {
     @CreatedDate
     private LocalDateTime createdAt;
 
-    private boolean isRead;
+    private boolean isRead = false;
+
+    //알림 생성
+    public static Notification create(User user, String content) {
+        Notification notification = new Notification();
+        notification.user = user;
+        notification.content = content;
+
+        return notification;
+    }
 }

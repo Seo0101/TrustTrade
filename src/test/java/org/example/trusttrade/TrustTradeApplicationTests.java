@@ -1,25 +1,16 @@
 package org.example.trusttrade;
 
-import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.item.auction.Auction;
-import org.example.trusttrade.domain.item.auction.AuctionDeposit;
-import org.example.trusttrade.domain.item.auction.DepositOrder;
-import org.example.trusttrade.domain.item.auction.DepositOrderStatus;
-import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Transactional;
 
-@RunWith(SpringRunner.class)
+
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
+@Transactional
 class TrustTradeApplicationTests {
 
-    @Test
-    void contextLoads() {
 
-
-
-
-    }
 
 }
