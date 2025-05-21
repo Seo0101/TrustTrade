@@ -22,11 +22,11 @@ public class Bids {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name = "auction_id",nullable = false)
+    @JoinColumn(name = "auction_id",nullable = false)
     private Auction auction;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name = "bidder_id",nullable = false)
+    @JoinColumn(name = "bidder_id",nullable = false)
     private User user;
 
     @Column(name = "created_time",nullable = false)
