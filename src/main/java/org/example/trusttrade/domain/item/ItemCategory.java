@@ -5,15 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.trusttrade.domain.item.Category;
-import org.example.trusttrade.domain.item.Item;
+import org.example.trusttrade.dto.BasicItemDto;
+
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Builder
-public class Item_category {
+public class ItemCategory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +28,13 @@ public class Item_category {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="category_id",nullable = false)
     private Category category;
+
+    public static List<ItemCategory> createMappings(Item item, List<Category> categories) {
+        return categories.stream()
+                .map(category -> ItemCategory.builder()
+                        .item(item)
+                        .category(category)
+                        .build())
+                .toList();
+    }
 }

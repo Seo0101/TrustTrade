@@ -2,9 +2,7 @@ package org.example.trusttrade.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.trusttrade.domain.order.Notification;
-import org.example.trusttrade.domain.order.Order;
 import org.example.trusttrade.dto.NotificationForm;
-import org.example.trusttrade.dto.OrderReqDto;
 import org.example.trusttrade.service.NotificationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
