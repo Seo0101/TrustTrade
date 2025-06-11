@@ -1,22 +1,18 @@
 package org.example.trusttrade.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.item.auction.Auction;
 import org.example.trusttrade.domain.item.auction.Bids;
 import org.example.trusttrade.dto.BidsResponseDto;
 import org.example.trusttrade.dto.CreateBidReq;
 import org.example.trusttrade.repository.AuctionRepository;
 import org.example.trusttrade.repository.BidRepository;
-import org.example.trusttrade.repository.UserRepository;
-import org.example.trusttrade.service.AuctionService;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.example.trusttrade.service.BidService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/bids")

@@ -11,8 +11,8 @@ import java.util.UUID;
 
 
 import org.example.trusttrade.repository.SettlementRepository;
-import org.example.trusttrade.repository.UserRepository;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.repository.UserRepository;
+import org.example.trusttrade.login.domain.User;
 
 @Service
 @RequiredArgsConstructor

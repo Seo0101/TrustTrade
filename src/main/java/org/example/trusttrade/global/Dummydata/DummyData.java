@@ -2,9 +2,9 @@ package org.example.trusttrade.global.Dummydata;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.User.MemberType;
-import org.example.trusttrade.domain.User.Role;
+import org.example.trusttrade.login.domain.User;
+import org.example.trusttrade.login.domain.User.MemberType;
+import org.example.trusttrade.login.domain.User.Role;
 import org.example.trusttrade.domain.item.Category;
 import org.example.trusttrade.domain.item.ItemCategory;
 import org.example.trusttrade.domain.item.ItemImage;
@@ -18,7 +18,7 @@ import org.example.trusttrade.repository.CategoryRepository;
 import org.example.trusttrade.repository.ItemCategoryRepository;
 import org.example.trusttrade.repository.ItemImageRepository;
 import org.example.trusttrade.repository.ProductRepository;
-import org.example.trusttrade.repository.UserRepository;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;

@@ -8,9 +8,9 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.example.trusttrade.domain.SellerAccount;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.repository.SellerAccountRepository;
-import org.example.trusttrade.repository.UserRepository;
+import org.example.trusttrade.login.repository.UserRepository;
 
 @Service
 @RequiredArgsConstructor

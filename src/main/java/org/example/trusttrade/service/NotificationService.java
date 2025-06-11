@@ -2,12 +2,10 @@ package org.example.trusttrade.service;
 
 
 import lombok.RequiredArgsConstructor;
-import org.aspectj.weaver.ast.Not;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.order.Notification;
-import org.example.trusttrade.dto.NotificationForm;
 import org.example.trusttrade.repository.NotificationRepository;
-import org.example.trusttrade.repository.UserRepository;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

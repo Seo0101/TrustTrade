@@ -3,15 +3,12 @@ package org.example.trusttrade.service;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.item.auction.Auction;
-import org.example.trusttrade.domain.item.auction.AuctionStatus;
-import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.dto.AuctionItemDto;
 import org.example.trusttrade.repository.AuctionRepository;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 

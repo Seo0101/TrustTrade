@@ -2,11 +2,10 @@ package org.example.trusttrade.domain.item.products;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.item.Item;
 import org.example.trusttrade.dto.BasicItemDto;
 

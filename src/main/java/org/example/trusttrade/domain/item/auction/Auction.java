@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.item.Item;
 import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.dto.AuctionItemDto;

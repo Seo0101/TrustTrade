@@ -3,12 +3,13 @@ package org.example.trusttrade.service;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.item.products.Product;
 import org.example.trusttrade.dto.BasicItemDto;
+import org.example.trusttrade.login.service.UserService;
 import org.example.trusttrade.repository.ItemRepository;
 import org.example.trusttrade.repository.ProductRepository;
-import org.example.trusttrade.repository.UserRepository;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
