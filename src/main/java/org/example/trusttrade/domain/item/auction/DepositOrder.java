@@ -18,11 +18,14 @@ public class DepositOrder {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "deposit_order_id")
-    private Long id;
+    private String id;
 
     @OneToOne
     @JoinColumn(name = "auction_id", nullable = false)
     private Auction auction;
+
+    @Column(unique = true)
+    private String paymentKey;
 
     @ManyToOne
     @JoinColumn(name = "bidder_id", nullable = false)
@@ -43,6 +46,6 @@ public class DepositOrder {
     private LocalDateTime updateAt;
 
     public enum Status{
-        PENDING,DEPOSITED, REFUNDED, EXPIRED
+        PENDING, DEPOSITED, REFUNDED, CANCELED
     }
 }

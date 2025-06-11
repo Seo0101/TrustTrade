@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 public class OrderPaymentResDto {
 
-    private Long orderId;
+    private String orderId;
     private int amount;
     private String productName;
 

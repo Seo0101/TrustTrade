@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.trusttrade.domain.User;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -29,8 +30,20 @@ public class Bids {
     @JoinColumn(name = "bidder_id",nullable = false)
     private User user;
 
+    @Column(name ="bid_price" ,nullable = false)
+    private int bidPrice;
+
+    @CreationTimestamp
     @Column(name = "created_time",nullable = false)
     private LocalDateTime createdTime;
+
+    public static Bids create(Auction auction, User user, int bidPrice) {
+        return Bids.builder()
+                .auction(auction)
+                .user(user)
+                .bidPrice(bidPrice)
+                .build();
+    }
 
 
 

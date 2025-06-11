@@ -39,4 +39,9 @@ public class Notification {
 
         return notification;
     }
+
+    //읽음 상태 변경
+    public void isRead(){
+        this.isRead = true;
+    }
 }
