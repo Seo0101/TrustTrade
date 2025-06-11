@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.item.auction.Auction;
-import org.example.trusttrade.domain.item.products.Product;
 import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.dto.BasicItemDto;
 
@@ -54,11 +52,15 @@ public class Item {
                 .build();
     }
 
-
+    // 물품 구분
     @Transient
     public String getItemType() {
         return this.getClass().getAnnotation(DiscriminatorValue.class).value();
     }
 
-
+    //경매 업데이트 - Item
+    public void updateItem(String name, String description){
+        this.name = name;
+        this.description = description;
+    }
 }

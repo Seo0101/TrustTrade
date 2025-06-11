@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ConfirmPaymentRequest {
-    private String amount;
+    private int amount;
     private String orderId;
     private String paymentKey;
 }

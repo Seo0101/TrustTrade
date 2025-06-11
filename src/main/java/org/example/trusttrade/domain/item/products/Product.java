@@ -45,6 +45,8 @@ public class Product extends Item {
                 .productPrice(dto.getPrice())
                 .status(ProductStatus.SALE)
                 .build();
+
+
     }
 
 }

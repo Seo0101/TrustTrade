@@ -9,10 +9,13 @@ spring:
     username: user
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
+    redis:
+      host: localhost
+      port: 6379
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     show-sql: true
     properties:
       hibernate:
@@ -27,6 +30,7 @@ nts:
 kakao:
   api:
     service-key: 2825961cc8fb6c3773683f50fc3b6b7a
+
 
 # 로깅 설정
 logging:

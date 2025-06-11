@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.trusttrade.domain.order.Order;
 import org.example.trusttrade.dto.*;
+import org.example.trusttrade.service.NotificationService;
 import org.example.trusttrade.service.OrderService;
 import org.example.trusttrade.service.PaymentService;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,10 @@ import org.springframework.web.bind.annotation.*;
 public class PaymentController {
 
     private final PaymentService paymentService;
-    private final OrderService orderService;
+
 
     //결제 정보 검증
-    @PostMapping("/verifyPayment")
+    @PostMapping("/verify")
     public ResponseEntity<?> verifyPayment(@RequestBody OrderPaymentResDto orderPaymentResDto) {
 
         Order order = paymentService.verifyPayment(orderPaymentResDto);
@@ -30,15 +31,17 @@ public class PaymentController {
                     .message("결제 금액 정보가 유효하지 않습니다.")
                     .build());
         } else {
-            return ResponseEntity.ok("success");
+            return ResponseEntity.ok("결제 정보가 검증되었습니다.");
         }
     }
 
+    //결제 인증 api 호출
     @PostMapping("/confirm")
     public ResponseEntity confirm(@RequestBody ConfirmPaymentRequest confirmPaymentRequest) {
         try {
 
             paymentService.confirmAndSavePayment(confirmPaymentRequest);
+
             return ResponseEntity.ok("결제 승인 및 저장 성공");
 
         } catch (Exception e) {
