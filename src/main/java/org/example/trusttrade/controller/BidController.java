@@ -1,12 +1,14 @@
 package org.example.trusttrade.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.item.auction.Bids;
+import org.example.trusttrade.auction.Bids;
+
 import org.example.trusttrade.dto.BidsResponseDto;
 import org.example.trusttrade.dto.CreateBidReq;
 import org.example.trusttrade.repository.AuctionRepository;
 import org.example.trusttrade.repository.BidRepository;
 import org.example.trusttrade.login.repository.UserRepository;
+
 import org.example.trusttrade.service.BidService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

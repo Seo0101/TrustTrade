@@ -1,16 +1,28 @@
 package org.example.trusttrade.service;
 
+<<<<<<< HEAD
+import org.example.trusttrade.domain.User;
+import org.example.trusttrade.item.domain.products.Product;
+import org.example.trusttrade.item.domain.products.ProductLocation;
+import org.example.trusttrade.item.domain.products.ProductStatus;
+=======
 import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.item.products.Product;
 import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.domain.item.products.ProductStatus;
+>>>>>>> develop
 import org.example.trusttrade.domain.order.Order;
-import org.example.trusttrade.dto.BasicItemDto;
+import org.example.trusttrade.item.dto.request.BasicItemDto;
 import org.example.trusttrade.dto.OrderPaymentResDto;
 import org.example.trusttrade.dto.OrderReqDto;
+<<<<<<< HEAD
+import org.example.trusttrade.item.repository.ProductLocationRepository;
+import org.example.trusttrade.item.repository.ProductRepository;
+import org.example.trusttrade.repository.UserRepository;
+=======
 import org.example.trusttrade.repository.ProductLocationRepository;
-import org.example.trusttrade.repository.ProductRepository;
 import org.example.trusttrade.login.repository.UserRepository;
+>>>>>>> develop
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,10 +3,11 @@ package org.example.trusttrade.service;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.example.trusttrade.auction.Auction;
 import org.example.trusttrade.login.domain.User;
-import org.example.trusttrade.domain.item.auction.Auction;
 import org.example.trusttrade.dto.AuctionItemDto;
 import org.example.trusttrade.repository.AuctionRepository;
+import org.example.trusttrade.item.service.ItemService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,5 +39,8 @@ public class AuctionService {
     public List<Auction> getAuctionsBySeller(UUID sellerId) {
         return auctionRepository.getAuctionsBySellerId(sellerId);
     }
+
+
+
 
 }
