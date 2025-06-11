@@ -3,7 +3,7 @@ package org.example.trusttrade.domain.item;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.dto.BasicItemDto;
 

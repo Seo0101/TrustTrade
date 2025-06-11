@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import org.example.trusttrade.login.domain.User;
 
 import java.time.LocalDateTime;
 
