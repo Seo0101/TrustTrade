@@ -2,15 +2,15 @@ package org.example.trusttrade.service;
 
 
 import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.order.Notification;
-import org.example.trusttrade.dto.NotificationForm;
-import org.example.trusttrade.repository.NotificationRepository;
+import org.example.trusttrade.notification.domain.Notification;
+import org.example.trusttrade.notification.dto.NotificationForm;
+import org.example.trusttrade.notification.service.NotificationService;
+import org.example.trusttrade.notification.repository.NotificationRepository;
 import org.example.trusttrade.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 import static org.junit.jupiter.api.Assertions.assertEquals;

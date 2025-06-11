@@ -1,24 +1,17 @@
 package org.example.trusttrade.service;
 
-import jakarta.persistence.EntityNotFoundException;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.auction.repository.AuctionRepository;
 import org.example.trusttrade.domain.item.Category;
 import org.example.trusttrade.domain.item.Item;
 import org.example.trusttrade.domain.item.ItemCategory;
 import org.example.trusttrade.domain.item.ItemImage;
-import org.example.trusttrade.domain.item.products.Product;
-import org.example.trusttrade.domain.item.products.ProductLocation;
-import org.example.trusttrade.dto.AuctionItemDto;
-import org.example.trusttrade.dto.BasicItemDto;
 import org.example.trusttrade.dto.ItemResponseDto;
 import org.example.trusttrade.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
