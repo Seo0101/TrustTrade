@@ -1,7 +1,7 @@
 package org.example.trusttrade.dto;
 
 import lombok.Data;
-import org.example.trusttrade.domain.item.auction.Bids;
+import org.example.trusttrade.auction.Bids;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

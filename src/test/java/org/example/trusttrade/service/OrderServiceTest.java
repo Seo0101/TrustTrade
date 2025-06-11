@@ -1,20 +1,19 @@
 package org.example.trusttrade.service;
 
 import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.item.products.Product;
-import org.example.trusttrade.domain.item.products.ProductLocation;
-import org.example.trusttrade.domain.item.products.ProductStatus;
+import org.example.trusttrade.item.domain.products.Product;
+import org.example.trusttrade.item.domain.products.ProductLocation;
+import org.example.trusttrade.item.domain.products.ProductStatus;
 import org.example.trusttrade.domain.order.Order;
 import org.example.trusttrade.dto.OrderReqDto;
 import org.example.trusttrade.repository.OrderRepository;
-import org.example.trusttrade.repository.ProductLocationRepository;
-import org.example.trusttrade.repository.ProductRepository;
+import org.example.trusttrade.item.repository.ProductLocationRepository;
+import org.example.trusttrade.item.repository.ProductRepository;
 import org.example.trusttrade.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,7 +21,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @ExtendWith(SpringExtension.class)

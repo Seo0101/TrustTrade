@@ -1,7 +1,6 @@
 package org.example.trusttrade.repository;
 
-import org.example.trusttrade.domain.item.auction.Bids;
-import org.example.trusttrade.domain.order.Order;
+import org.example.trusttrade.auction.Bids;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
