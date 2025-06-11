@@ -13,12 +13,14 @@ import org.example.trusttrade.domain.item.products.Product;
 import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.dto.AuctionItemDto;
 import org.example.trusttrade.dto.BasicItemDto;
+import org.example.trusttrade.dto.ItemResponseDto;
 import org.example.trusttrade.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -28,7 +30,10 @@ public class ItemService {
     private final ItemImageRepository itemImageRepository;
     private final CategoryRepository categoryRepository;
     private final ItemCategoryRepository itemCategoryRepository;
+    private final ItemRepository itemRepository;
     private final CategoryService categoryService;
+    private final ProductRepository productRepository;
+    private final AuctionRepository auctionRepository;
 
     @Transactional
     public void saveItemDetails(Item item, List<String> imageUrls, List<Integer> categoryIds) {
@@ -69,6 +74,27 @@ public class ItemService {
     }
 
 
+    // 물품 조회
+    public List<ItemResponseDto> getItemByItemType(String itemType) {
+        List<? extends Item> items;
 
+        if ("PRODUCT".equalsIgnoreCase(itemType)) {
+            items = productRepository.findAll();
+        } else if ("AUCTION".equalsIgnoreCase(itemType)) {
+            items = auctionRepository.findAll();
+        } else {
+            throw new IllegalArgumentException("Unknown item type");
+        }
 
+        return items.stream()
+                .map(item -> new ItemResponseDto(
+                        item.getId(),
+                        item.getName(),
+                        item.getItemType(), // now works via @Transient
+                        item.getDescription()
+                ))
+                .collect(Collectors.toList());
+    }
 }
+
+

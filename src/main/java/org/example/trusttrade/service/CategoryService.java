@@ -22,4 +22,13 @@ public class CategoryService {
                         .orElseThrow(() -> new EntityNotFoundException("카테고리 없음: ID = " + id)))
                 .toList();
     }
+
+    public List<Category> getCategoryList() {
+        return categoryRepository.findAll();
+    }
+
+
+
+
+
 }

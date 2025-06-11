@@ -1,4 +1,4 @@
-package org.example.trusttrade;
+package org.example.trusttrade.global.Dummydata;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
