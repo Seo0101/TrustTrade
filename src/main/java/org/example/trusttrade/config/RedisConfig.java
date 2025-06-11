@@ -1,7 +1,7 @@
 package org.example.trusttrade.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.trusttrade.dto.ChatSubscriber;
+import org.example.trusttrade.chat.dto.ChatSubscriber;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

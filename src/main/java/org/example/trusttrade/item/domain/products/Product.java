@@ -5,10 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.example.trusttrade.domain.User;
 import org.example.trusttrade.item.domain.Item;
 import org.example.trusttrade.item.dto.request.BasicItemDto;
 
+import org.example.trusttrade.login.domain.User;
 import java.time.LocalDateTime;
 
 @Entity

@@ -3,7 +3,7 @@ package org.example.trusttrade.item.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
 import org.example.trusttrade.dto.AuctionItemDto;
 import org.example.trusttrade.item.dto.request.BasicItemDto;
 import org.example.trusttrade.item.dto.response.ItemResponseDto;
@@ -11,7 +11,9 @@ import org.example.trusttrade.item.dto.request.ItemTypeDto;
 import org.example.trusttrade.service.AuctionService;
 import org.example.trusttrade.item.service.ItemService;
 import org.example.trusttrade.item.service.ProductService;
-import org.example.trusttrade.service.UserService;
+
+import org.example.trusttrade.login.service.UserService;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

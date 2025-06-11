@@ -3,9 +3,12 @@ package org.example.trusttrade.item.domain;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.example.trusttrade.domain.User;
+
 import org.example.trusttrade.item.domain.products.ProductLocation;
 import org.example.trusttrade.item.dto.request.BasicItemDto;
+
+import org.example.trusttrade.login.domain.User;
+
 
 import java.time.LocalDateTime;
 

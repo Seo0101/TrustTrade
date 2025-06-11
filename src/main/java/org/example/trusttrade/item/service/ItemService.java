@@ -9,6 +9,7 @@ import org.example.trusttrade.item.domain.ItemImage;
 import org.example.trusttrade.item.repository.*;
 import org.example.trusttrade.item.dto.response.ItemResponseDto;
 import org.example.trusttrade.repository.AuctionRepository;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

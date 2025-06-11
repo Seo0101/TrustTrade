@@ -2,16 +2,13 @@ package org.example.trusttrade.controller;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.aspectj.weaver.ast.Or;
 import org.example.trusttrade.client.TossPaymentClient;
 import org.example.trusttrade.domain.order.Order;
 import org.example.trusttrade.dto.*;
 import org.example.trusttrade.repository.OrderRepository;
 import org.example.trusttrade.service.OrderService;
 import org.example.trusttrade.service.PaymentService;
-import org.example.trusttrade.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
