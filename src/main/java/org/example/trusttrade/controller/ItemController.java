@@ -6,16 +6,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.trusttrade.domain.User;
 import org.example.trusttrade.dto.AuctionItemDto;
 import org.example.trusttrade.dto.BasicItemDto;
+import org.example.trusttrade.dto.ItemResponseDto;
+import org.example.trusttrade.dto.ItemTypeDto;
 import org.example.trusttrade.service.AuctionService;
 import org.example.trusttrade.service.ItemService;
 import org.example.trusttrade.service.ProductService;
 import org.example.trusttrade.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -61,5 +62,13 @@ public class ItemController {
                     .body("경매 물품 등록 실패: " + e.getMessage());
         }
     }
+
+    // 일반 물품 or 경매 물품 조회
+    @GetMapping("/list")
+    public ResponseEntity<List<ItemResponseDto>> getItemsByType (@RequestBody ItemTypeDto dto){
+        List<ItemResponseDto> items = itemService.getItemByItemType(dto.getItemType());
+        return ResponseEntity.ok(items);
+    }
+
 
 }

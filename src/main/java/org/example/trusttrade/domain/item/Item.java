@@ -52,10 +52,15 @@ public class Item {
                 .build();
     }
 
+    // 물품 구분
+    @Transient
+    public String getItemType() {
+        return this.getClass().getAnnotation(DiscriminatorValue.class).value();
+    }
+
     //경매 업데이트 - Item
     public void updateItem(String name, String description){
         this.name = name;
         this.description = description;
     }
-
 }

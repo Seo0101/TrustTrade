@@ -31,8 +31,7 @@ public class ProductService {
         log.debug("Product 저장 완료: itemId={}", product.getId());
 
         // 2) 이미지·카테고리 저장
-        itemService.saveItemDetails(product, dto.getImages(), dto.getCategoryIds()
-        );
+        itemService.saveItemDetails(product, dto.getImages(), dto.getCategoryIds());
         log.debug("이미지·카테고리 저장 완료: itemId={}", product.getId());
     }
 
