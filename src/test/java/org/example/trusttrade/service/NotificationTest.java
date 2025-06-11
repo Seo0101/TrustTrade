@@ -31,6 +31,7 @@ public class NotificationTest {
     @Autowired
     private UserRepository userRepository;
 
+    //알림 생성 및 조회
     @Test
     public void createNoti(){
 
@@ -64,7 +65,7 @@ public class NotificationTest {
         request.setContent("원목의자 상품 입금이 완료되었습니다. 지금 바로 상품을 발송해주세요.");
         request.setUserId(user.getId());
 
-        Notification noti =  notificationService.createNotification(request);
+        Notification noti =  notificationService.createNotification(request.getContent(), request.getUserId());
 
         Notification find = notificationRepository.findById(noti.getId()).orElse(null);
         assertEquals(noti.getId(), find.getId());

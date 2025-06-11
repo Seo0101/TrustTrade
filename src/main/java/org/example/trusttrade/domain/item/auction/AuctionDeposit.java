@@ -44,6 +44,6 @@ public class AuctionDeposit {
     private LocalDateTime refundedAt;
 
     public enum Status{
-        DEPOSITED, REFUNDED, EXPIRED
+        DEPOSITED, REFUNDED
     }
 }

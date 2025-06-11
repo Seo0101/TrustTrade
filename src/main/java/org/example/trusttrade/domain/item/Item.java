@@ -52,4 +52,10 @@ public class Item {
                 .build();
     }
 
+    //경매 업데이트 - Item
+    public void updateItem(String name, String description){
+        this.name = name;
+        this.description = description;
+    }
+
 }

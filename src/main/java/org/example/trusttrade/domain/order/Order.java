@@ -11,16 +11,16 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
-@Getter @Setter
+@Getter
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "orders")
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "order_id")
-    private Long id;
+    private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id" ,nullable = false)
@@ -55,8 +55,9 @@ public class Order {
     }
 
     //order 생성
-    public static Order create(Product product, User seller, User buyer) {
+    public static Order create(Product product, User buyer, User seller) {
         Order order = new Order();
+        order.id = "5ac5vLjsg0YhNjGIkquOE"; //토스 api를 통해 orderId 값 수동 설정
         order.amount = product.getProductPrice();
         order.productName = product.getName();
         order.product = product;
@@ -64,6 +65,11 @@ public class Order {
         order.buyer = buyer;
 
         return order;
+    }
+
+    //결제 인증 api 호출후 paymentKey 설정
+    public void setPaymentKey(String paymentKey) {
+        this.paymentKey = paymentKey;
     }
 
 
@@ -83,7 +89,7 @@ public class Order {
     }
 
     //결제 취소될 경우 상태
-    public void cancelOrder() {
+    public void cancel() {
         if(this.status != Status.PENDING) {
             throw new IllegalStateException("pending 상태가 아니면 취소 처리가 불가능합니다.");
         }

@@ -47,7 +47,7 @@ public class OrderService {
     }
 
     //주문 수령 완료
-    public void completeOrder(Long orderId) {
+    public void completeOrder(String orderId) {
         Order order = orderRepository.findById(orderId)
                 .orElseThrow(() -> new IllegalArgumentException("주문을 찾을 수 없습니다."));
 
@@ -56,6 +56,7 @@ public class OrderService {
         // DB에 상태 변경 반영
         orderRepository.save(order);
     }
+
 
     //주문 목록 조회
     public List<Order> getOrdersByUserId(UUID userId){
