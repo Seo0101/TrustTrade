@@ -1,11 +1,10 @@
 package org.example.trusttrade.notification.service;
 
-
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.example.trusttrade.notification.domain.Notification;
 import org.example.trusttrade.notification.repository.NotificationRepository;
-import org.example.trusttrade.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

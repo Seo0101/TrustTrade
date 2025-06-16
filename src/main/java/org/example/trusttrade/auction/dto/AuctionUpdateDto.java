@@ -1,7 +1,7 @@
 package org.example.trusttrade.auction.dto;
 
 import lombok.Getter;
-import org.example.trusttrade.domain.item.products.ProductLocation;
+import org.example.trusttrade.item.domain.products.ProductLocation;
 
 import java.time.LocalDateTime;
 

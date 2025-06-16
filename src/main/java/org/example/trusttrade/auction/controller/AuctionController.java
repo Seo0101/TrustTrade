@@ -1,13 +1,16 @@
 package org.example.trusttrade.auction.controller;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.example.trusttrade.auction.domain.Auction;
 import org.example.trusttrade.auction.dto.AuctionUpdateDto;
 import org.example.trusttrade.auction.repository.AuctionRepository;
 import org.example.trusttrade.auction.service.AuctionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

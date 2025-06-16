@@ -2,23 +2,21 @@ package org.example.trusttrade.global.Dummydata;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.User.MemberType;
-import org.example.trusttrade.domain.User.Role;
-import org.example.trusttrade.domain.item.Category;
-import org.example.trusttrade.domain.item.ItemCategory;
-import org.example.trusttrade.domain.item.ItemImage;
-import org.example.trusttrade.domain.item.products.Product;
-import org.example.trusttrade.domain.item.products.ProductLocation;
-import org.example.trusttrade.domain.item.products.ProductStatus;
 import org.example.trusttrade.auction.domain.Auction;
 import org.example.trusttrade.auction.domain.AuctionStatus;
 import org.example.trusttrade.auction.repository.AuctionRepository;
-import org.example.trusttrade.repository.CategoryRepository;
-import org.example.trusttrade.repository.ItemCategoryRepository;
-import org.example.trusttrade.repository.ItemImageRepository;
-import org.example.trusttrade.repository.ProductRepository;
-import org.example.trusttrade.repository.UserRepository;
+import org.example.trusttrade.item.domain.Category;
+import org.example.trusttrade.item.domain.ItemCategory;
+import org.example.trusttrade.item.domain.ItemImage;
+import org.example.trusttrade.item.domain.products.Product;
+import org.example.trusttrade.item.domain.products.ProductLocation;
+import org.example.trusttrade.item.domain.products.ProductStatus;
+import org.example.trusttrade.item.repository.CategoryRepository;
+import org.example.trusttrade.item.repository.ItemCategoryRepository;
+import org.example.trusttrade.item.repository.ItemImageRepository;
+import org.example.trusttrade.item.repository.ProductRepository;
+import org.example.trusttrade.login.domain.User;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -51,8 +49,8 @@ public class DummyData {
                 .id(UUID.fromString("ffd9c396-b70e-4d59-8d04-fad7b1fa1df2"))
                 .email("dummyuser@example.com")
                 .profileImage("https://example.com/image.png")
-                .role(Role.USER)
-                .memberType(MemberType.GENERAL)
+                .role(User.Role.USER)
+                .memberType(User.MemberType.GENERAL)
                 .roughAddress("서울특별시 강남구")
                 .createdAt(LocalDateTime.now())
                 .isDeleted(false)
@@ -65,8 +63,8 @@ public class DummyData {
                 .id(UUID.fromString("a1b2c3d4-e5f6-7890-abcd-ef1234567890"))
                 .email("businessuser@example.com")
                 .profileImage("https://example.com/business.png")
-                .role(Role.USER)
-                .memberType(MemberType.BUSINESS)
+                .role(User.Role.USER)
+                .memberType(User.MemberType.BUSINESS)
                 .roughAddress("서울특별시 서초구")
                 .createdAt(LocalDateTime.now())
                 .isDeleted(false)

@@ -5,12 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.item.Item;
-import org.example.trusttrade.domain.item.products.ProductLocation;
 import org.example.trusttrade.auction.dto.AuctionItemDto;
 import org.example.trusttrade.auction.dto.AuctionUpdateDto;
-
+import org.example.trusttrade.item.domain.Item;
+import org.example.trusttrade.item.domain.products.ProductLocation;
+import org.example.trusttrade.login.domain.User;
 import java.time.LocalDateTime;
 import java.util.List;
 

@@ -1,12 +1,11 @@
 package org.example.trusttrade.service;
 
-
-import org.example.trusttrade.domain.User;
+import org.example.trusttrade.login.domain.User;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.example.trusttrade.notification.domain.Notification;
 import org.example.trusttrade.notification.dto.NotificationForm;
 import org.example.trusttrade.notification.service.NotificationService;
 import org.example.trusttrade.notification.repository.NotificationRepository;
-import org.example.trusttrade.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

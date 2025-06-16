@@ -1,13 +1,12 @@
 package org.example.trusttrade.order.service;
-
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.User;
-import org.example.trusttrade.domain.item.products.Product;
+import org.example.trusttrade.item.domain.products.Product;
+import org.example.trusttrade.item.repository.ProductRepository;
+import org.example.trusttrade.login.domain.User;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.example.trusttrade.order.domain.Order;
 import org.example.trusttrade.order.dto.OrderReqDto;
 import org.example.trusttrade.order.repository.OrderRepository;
-import org.example.trusttrade.repository.ProductRepository;
-import org.example.trusttrade.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -6,13 +6,14 @@ import org.example.trusttrade.auction.dto.BidsResponseDto;
 import org.example.trusttrade.auction.dto.CreateBidReq;
 import org.example.trusttrade.auction.repository.AuctionRepository;
 import org.example.trusttrade.auction.repository.BidRepository;
-import org.example.trusttrade.repository.UserRepository;
 import org.example.trusttrade.auction.service.BidService;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/bids")

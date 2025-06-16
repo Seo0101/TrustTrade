@@ -2,11 +2,13 @@ package org.example.trusttrade.order.controller;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.example.trusttrade.order.client.TossPaymentClient;
 import org.example.trusttrade.order.domain.Order;
 import org.example.trusttrade.order.dto.OrderCancelDto;
 import org.example.trusttrade.order.dto.OrderPaymentResDto;
 import org.example.trusttrade.order.dto.OrderReqDto;
 import org.example.trusttrade.order.dto.OrderResDto;
+import org.example.trusttrade.order.repository.OrderRepository;
 import org.example.trusttrade.order.service.OrderService;
 import org.example.trusttrade.order.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +27,8 @@ public class OrderController {
 
     @Autowired
     private final OrderService orderService;
-
     @Autowired
     private final PaymentService paymentService;
-
 
     //order 생성
     @PostMapping("/new")

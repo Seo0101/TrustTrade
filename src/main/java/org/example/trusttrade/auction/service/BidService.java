@@ -1,16 +1,15 @@
 package org.example.trusttrade.auction.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.trusttrade.domain.User;
 import org.example.trusttrade.auction.domain.Auction;
 import org.example.trusttrade.auction.domain.Bids;
 import org.example.trusttrade.auction.dto.BidsResponseDto;
 import org.example.trusttrade.auction.repository.AuctionRepository;
 import org.example.trusttrade.auction.repository.BidRepository;
-import org.example.trusttrade.repository.UserRepository;
+import org.example.trusttrade.login.domain.User;
+import org.example.trusttrade.login.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
